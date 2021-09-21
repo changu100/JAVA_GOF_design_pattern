@@ -13,7 +13,7 @@ public class main{
             
     }
 
-    public static void main(String[] args){
+    public static void main3(String[] args){
         System.out.println("start. ");
         TicketMaker obj1 = TicketMaker.getInstance();
         TicketMaker obj2 = TicketMaker.getInstance();
@@ -28,4 +28,14 @@ public class main{
         System.out.println("end. ");
             
     }
+
+    public static void main(String[] args) {
+        System.out.println("Start.");
+        for (int i = 0; i < 9; i++) {
+            Singleton3 triple = Singleton3.getInstance(i % 3);
+            System.out.println(i + ":" + triple);
+        }
+        System.out.println("End.");
+    }
 }
+

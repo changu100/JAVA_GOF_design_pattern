@@ -6,12 +6,15 @@ public class Main {
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Usage: java Main class.name.of.ConcreteFactory");
-            System.out.println("Example 1: java Main listfactory.ListFactory");
-            System.out.println("Example 2: java Main tablefactory.TableFactory");
+            System.out.println("Example 1: java Main part3.chapter8.listfactory.ListFactory");
+            System.out.println("Example 2: java Main part3.chapter8.tablefactory.TableFactory");
             System.exit(0);
         }
         Factory factory = Factory.getFactory(args[0]);
 
+        
+        // String test = new String("tablefactory.TableFactory");
+        // Factory factory = Factory.getFactory(test);
         Link joins = factory.createLink("joins", "http://www.joins.com/");
         Link chosun = factory.createLink("chosun", "http://www.chosun.com/");
 
